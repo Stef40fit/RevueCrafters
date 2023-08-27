@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "5a6ac449-3d6a-4eb6-a380-cf93cf3ccd32",
+		"name": "Revue Crafters API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28702992"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Stefan1\",\r\n    \"email\": \"stefan1@example.com\",\r\n    \"password\": \"121212\",\r\n    \"rePassword\": \"121212\",\r\n    \"acceptedAgreement\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d2925tksfvgq8c.cloudfront.net/api/User/Create",
+					"protocol": "https",
+					"host": [
+						"d2925tksfvgq8c",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"User",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"stefan1@example.com\",\r\n    \"password\": \"121212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d2925tksfvgq8c.cloudfront.net/api/User/Authentication",
+					"protocol": "https",
+					"host": [
+						"d2925tksfvgq8c",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Revue",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI4OTUzODJmNy04NTQ3LTRjMDQtYmFhYy01YWI3NmE5MTdhZWYiLCJpYXQiOiIwOC8xOS8yMDIzIDA2OjEwOjU0IiwiVXNlcklkIjoiMjRlZTVlZTktYjJjZC00YzdmLTgzMzAtMDhkYjlmM2YxZjliIiwiRW1haWwiOiJzdGVmYW4xQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJTdGVmYW4xIiwiZXhwIjoxNjkyNDQ3MDU0LCJpc3MiOiJSZXZ1ZU1ha2VyX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiUmV2dWVNYWtlcl9XZWJBUElfU29mdFVuaSJ9.ZvozdDE1_6nVW_t_RDtpDquIEHYwQ6GLflhGO6oYmd4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d2925tksfvgq8c.cloudfront.net/api/Revue/All",
+					"protocol": "https",
+					"host": [
+						"d2925tksfvgq8c",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Revue",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Revue",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI4OTUzODJmNy04NTQ3LTRjMDQtYmFhYy01YWI3NmE5MTdhZWYiLCJpYXQiOiIwOC8xOS8yMDIzIDA2OjEwOjU0IiwiVXNlcklkIjoiMjRlZTVlZTktYjJjZC00YzdmLTgzMzAtMDhkYjlmM2YxZjliIiwiRW1haWwiOiJzdGVmYW4xQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJTdGVmYW4xIiwiZXhwIjoxNjkyNDQ3MDU0LCJpc3MiOiJSZXZ1ZU1ha2VyX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiUmV2dWVNYWtlcl9XZWJBUElfU29mdFVuaSJ9.ZvozdDE1_6nVW_t_RDtpDquIEHYwQ6GLflhGO6oYmd4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Working1\",\r\n    \"url\": \"https://contenthub-static.grammarly.com/blog/wp-content/uploads/2020/10/Write-a-Story-760x406.jpg\",\r\n    \"description\": \"Working hard.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d2925tksfvgq8c.cloudfront.net/api/Revue/Create",
+					"protocol": "https",
+					"host": [
+						"d2925tksfvgq8c",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Revue",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Revue",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI4OTUzODJmNy04NTQ3LTRjMDQtYmFhYy01YWI3NmE5MTdhZWYiLCJpYXQiOiIwOC8xOS8yMDIzIDA2OjEwOjU0IiwiVXNlcklkIjoiMjRlZTVlZTktYjJjZC00YzdmLTgzMzAtMDhkYjlmM2YxZjliIiwiRW1haWwiOiJzdGVmYW4xQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJTdGVmYW4xIiwiZXhwIjoxNjkyNDQ3MDU0LCJpc3MiOiJSZXZ1ZU1ha2VyX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiUmV2dWVNYWtlcl9XZWJBUElfU29mdFVuaSJ9.ZvozdDE1_6nVW_t_RDtpDquIEHYwQ6GLflhGO6oYmd4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Working2\",\r\n    \"url\": \"https://www.egypttoday.com/siteimages/Larg/202110100453295329.jpg\",\r\n    \"description\": \"Working harder\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d2925tksfvgq8c.cloudfront.net/api/Revue/Edit?revueId=cd7b15ef-a0a8-478c-bb4c-08db9f406c60",
+					"protocol": "https",
+					"host": [
+						"d2925tksfvgq8c",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Revue",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "revueId",
+							"value": "cd7b15ef-a0a8-478c-bb4c-08db9f406c60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Revue",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI4OTUzODJmNy04NTQ3LTRjMDQtYmFhYy01YWI3NmE5MTdhZWYiLCJpYXQiOiIwOC8xOS8yMDIzIDA2OjEwOjU0IiwiVXNlcklkIjoiMjRlZTVlZTktYjJjZC00YzdmLTgzMzAtMDhkYjlmM2YxZjliIiwiRW1haWwiOiJzdGVmYW4xQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJTdGVmYW4xIiwiZXhwIjoxNjkyNDQ3MDU0LCJpc3MiOiJSZXZ1ZU1ha2VyX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiUmV2dWVNYWtlcl9XZWJBUElfU29mdFVuaSJ9.ZvozdDE1_6nVW_t_RDtpDquIEHYwQ6GLflhGO6oYmd4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d2925tksfvgq8c.cloudfront.net/api/Revue/Delete?revueId=cd7b15ef-a0a8-478c-bb4c-08db9f406c60",
+					"protocol": "https",
+					"host": [
+						"d2925tksfvgq8c",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Revue",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "revueId",
+							"value": "cd7b15ef-a0a8-478c-bb4c-08db9f406c60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Methods",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI4OTUzODJmNy04NTQ3LTRjMDQtYmFhYy01YWI3NmE5MTdhZWYiLCJpYXQiOiIwOC8xOS8yMDIzIDA2OjEwOjU0IiwiVXNlcklkIjoiMjRlZTVlZTktYjJjZC00YzdmLTgzMzAtMDhkYjlmM2YxZjliIiwiRW1haWwiOiJzdGVmYW4xQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJTdGVmYW4xIiwiZXhwIjoxNjkyNDQ3MDU0LCJpc3MiOiJSZXZ1ZU1ha2VyX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiUmV2dWVNYWtlcl9XZWJBUElfU29mdFVuaSJ9.ZvozdDE1_6nVW_t_RDtpDquIEHYwQ6GLflhGO6oYmd4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d2925tksfvgq8c.cloudfront.net/",
+					"protocol": "https",
+					"host": [
+						"d2925tksfvgq8c",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
